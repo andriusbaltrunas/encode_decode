@@ -44,15 +44,15 @@ public class ReadWriteDataHandler {
     }
 
 
-    public List<String> readEncodedFile(String fileName){
+    public List<String> readEncodedFile(String fileName) {
         List<String> result = new ArrayList<>();
-        try(BufferedReader bf = new BufferedReader(new FileReader(FILE_PATH + fileName))){
+        try (BufferedReader bf = new BufferedReader(new FileReader(FILE_PATH + fileName))) {
             String line;
-            while ((line = bf.readLine()) != null){
+            while ((line = bf.readLine()) != null) {
                 result.add(line);
             }
-        }catch (IOException e){
-            System.out.println("Can`t read file " +fileName);
+        } catch (IOException e) {
+            System.out.println("Can`t read file " + fileName);
         }
         return result;
     }

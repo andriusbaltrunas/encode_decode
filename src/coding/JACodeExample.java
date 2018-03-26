@@ -31,7 +31,7 @@ public class JACodeExample {
 
     }
 
-    private static void encodeInsertedText(Map<String, String> valuesMap, ReadWriteDataHandler readWriteDataHandler){
+    private static void encodeInsertedText(Map<String, String> valuesMap, ReadWriteDataHandler readWriteDataHandler) {
         List<String> items = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Iveskite teksta kodavimui");
@@ -45,10 +45,10 @@ public class JACodeExample {
         readWriteDataHandler.writeDataIntoFile(items, ENCODED_FILE_NAME);
     }
 
-    private static void decodeTextAndSaveText(ReadWriteDataHandler readWriteDataHandler, Map<String, String> codeMap){
+    private static void decodeTextAndSaveText(ReadWriteDataHandler readWriteDataHandler, Map<String, String> codeMap) {
         List<String> readCode = readWriteDataHandler.readEncodedFile(ENCODED_FILE_NAME);
         StringBuilder sb = new StringBuilder();
-        for (String c : readCode){
+        for (String c : readCode) {
             String letter = codeMap.get(c);
             sb.append(letter.equals(SPACE) ? " " : letter);
         }
